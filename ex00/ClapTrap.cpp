@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 13:08:46 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/24 02:24:32 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/24 14:41:43 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@
 #define ENERGY_POINTS	10
 #define ATTACK_DAMAGE	0
 
-ClapTrap::ClapTrap() {
-	ClapTrap("default");
+ClapTrap::ClapTrap(): _name("default") {
+	_hitPoints = HIT_POINTS;
+	_energyPoints = ENERGY_POINTS;
+	_attackDamage = ATTACK_DAMAGE;
+	std::cout << "ClapTrap " << _name << " was born" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name): _name(name) {

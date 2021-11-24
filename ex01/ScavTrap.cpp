@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:02:56 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/24 02:37:41 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/24 14:42:01 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@
 #define ENERGY_POINTS	50
 #define ATTACK_DAMAGE	20
 
-ScavTrap::ScavTrap() {
-	ScavTrap("default");
+ScavTrap::ScavTrap(): ClapTrap() {
+	_hitPoints = HIT_POINTS;
+	_energyPoints = ENERGY_POINTS;
+	_attackDamage = ATTACK_DAMAGE;
+	std::cout << "ScavTrap " << _name << " was born" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name) {

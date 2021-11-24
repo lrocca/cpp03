@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:02:56 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/24 02:29:04 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/24 14:44:21 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap():
-	ClapTrap("default_clap_name"), ScavTrap("default"), FragTrap("default") {
-	DiamondTrap("default");
+	ClapTrap("default_clap_name"), ScavTrap("default"), FragTrap("default"), _name("default") {
+	_hitPoints = FragTrap::_hitPoints;
+	_energyPoints = ScavTrap::_energyPoints;
+	_attackDamage = FragTrap::_attackDamage;
+	std::cout << "DiamondTrap " << _name << " was born" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name):

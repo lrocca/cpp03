@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:02:56 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/24 02:26:57 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/24 16:01:17 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@
 #define ATTACK_DAMAGE	30
 
 FragTrap::FragTrap(): ClapTrap() {
-	FragTrap("default");
+	_hitPoints = HIT_POINTS;
+	_energyPoints = ENERGY_POINTS;
+	_attackDamage = ATTACK_DAMAGE;
+	std::cout << "FragTrap " << _name << " was born" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name): ClapTrap(name) {
