@@ -1,0 +1,17 @@
+*.o
+*.gch
+.idea
+.vscode
+.DS_Store
+
+# ex00
+clap
+
+# ex01
+scav
+
+#ex02
+frag
+
+# ex03
+diamond
